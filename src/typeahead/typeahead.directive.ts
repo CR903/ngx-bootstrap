@@ -116,6 +116,8 @@ export class TypeaheadDirective implements OnInit, OnDestroy {
 
   /** This attribute indicates that the dropdown should be opened upwards */
   @Input() dropup = false;
+  
+  @Input() focus = false;
 
   // not yet implemented
   /** if false restrict model values to the ones selected from the popup only will be provided */
@@ -351,7 +353,8 @@ export class TypeaheadDirective implements OnInit, OnDestroy {
       )
       : normalizedQuery;
     this._container.matches = this._matches;
-    // this.element.nativeElement.focus(); update by chour 20190329
+    if (this.focus) // update by chour 20190329
+      this.element.nativeElement.focus(); 
   }
 
   hide(): void {
