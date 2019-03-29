@@ -351,7 +351,7 @@ export class TypeaheadDirective implements OnInit, OnDestroy {
       )
       : normalizedQuery;
     this._container.matches = this._matches;
-    this.element.nativeElement.focus();
+    // this.element.nativeElement.focus(); update by chour 20190329
   }
 
   hide(): void {
