@@ -117,7 +117,7 @@ export class TypeaheadDirective implements OnInit, OnDestroy {
   /** This attribute indicates that the dropdown should be opened upwards */
   @Input() dropup = false;
   
-  @Input() focus = false;
+  @Input() focus = true;
 
   // not yet implemented
   /** if false restrict model values to the ones selected from the popup only will be provided */
